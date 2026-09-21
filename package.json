@@ -1,0 +1,46 @@
+{
+  "name": "envlineage",
+  "version": "0.1.0",
+  "description": "Trace environment variables from code to CI.",
+  "type": "module",
+  "bin": {
+    "envlineage": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "check": "npm run typecheck && npm test && npm run pack:check",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "environment",
+    "env",
+    "cli",
+    "ci",
+    "docker",
+    "github-actions",
+    "static-analysis",
+    "configuration"
+  ],
+  "author": "EnvLineage contributors",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

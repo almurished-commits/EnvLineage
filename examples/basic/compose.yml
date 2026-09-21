@@ -1,0 +1,6 @@
+services:
+  api:
+    image: example/api:${IMAGE_TAG:-latest}
+    environment:
+      - DATABASE_URL
+      PORT: ${PORT:-3000}
