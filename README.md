@@ -15,6 +15,23 @@ npm install -g envlineage
 envlineage scan .
 ```
 
+### Example
+
+Given an application that requires `DATABASE_URL` but does not provide it through a supported Docker, Compose, or GitHub Actions source:
+
+```text
+EnvLineage
+Scanned 2 supported files • 1 variables • 1 findings
+
+ENV003  DATABASE_URL  src/config.ts:4:18
+  DATABASE_URL is required but no supported provider was found.
+  A required code consumer exists, but no Docker/Compose/GitHub Actions provider
+  was found in the supported repository sources. External runtime injection may
+  still exist.
+
+Summary: 1 errors, 0 warnings, 0 info
+```
+
 For CI:
 
 ```bash
