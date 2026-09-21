@@ -20,7 +20,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
 
-      - run: npm install --ignore-scripts
+      - run: npm ci --ignore-scripts
       - run: npm test
 
       - name: Check whether version is already published
