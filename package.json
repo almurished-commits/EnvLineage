@@ -42,5 +42,13 @@
   },
   "devDependencies": {
     "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almurished-commits/EnvLineage.git"
+  },
+  "homepage": "https://github.com/almurished-commits/EnvLineage#readme",
+  "bugs": {
+    "url": "https://github.com/almurished-commits/EnvLineage/issues"
   }
 }
